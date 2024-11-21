@@ -1,0 +1,281 @@
+/* Basic styles for larger screens (desktop) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    color: #333;
+    background: #f4f4f4;
+}
+header {
+    background: #ff5733;
+    color: white;
+    padding: 35px 0;
+    text-align: left;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+header p {
+    font-size: 1.2em;
+}
+
+nav {
+    background: #103;
+    color: white;
+    padding: 15px 0;
+}
+nav ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 10;
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 10px;
+}
+
+.profile-picture {
+    text-align: right;
+    margin: -165px 0;
+    padding: 5px;
+}
+.profile-picture img {
+    /*border-radius: 50%;*/
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+    border: 3px solid #ff5733;
+}
+
+/* Menu Styles - Default for desktop and tablet */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #103;
+    color: white;
+    padding: 0px 0;
+    margin-top: 1px;
+}
+.menu .column {
+    flex: 1;
+}
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu ul li {
+    margin: 10px 0;
+    text-align: left; /* Left-align items within each column */
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: block; /* Ensures that each link occupies its own line */
+}
+
+.menu ul li a:hover {
+    color: #ff5733;
+}
+h2 {
+    border-bottom: 2px solid #ff5733;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+/* Media Query for Tablets and Smaller Devices */
+@media (max-width: 1024px) {
+/*    header {
+        background: #ff5733;
+        color: white;
+        padding: 30px 0;
+        text-align: left;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    header p {
+        font-size: 1em;
+    }*/
+    header {
+    	display: flex; /* Align image and text side by side */
+    	align-items: left;
+    	justify-content: space-between;
+    	/*flex-wrap: wrap; Allow wrapping for small screens */
+    	background: #ff5733;
+    	color: white;
+    	padding: 0px 0;
+    	text-align: left;
+    }
+    header h1 {
+    	margin: 0;
+    	font-size: 2em;
+    	flex-basis: 100%; /* Take up full width on small screens */
+	/*text-align: left;*/
+    }
+    header p {
+    	margin: 0;
+   	font-size: 1.0em;
+    	line-height: 1.2;
+    	flex-basis: 100%; /* Adjust width for the text */
+    	text-align: left;
+    }
+
+
+    nav ul li {
+        margin: 10 50px;
+        font-size: 1em;
+    }
+
+    /* Stack the menu items vertically for tablets and smaller screens */
+    .menu {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: flex-start; /* Align items to the left */
+        padding: 0px 0;
+    }
+    
+    .menu .column {
+        flex: none; /* Reset column behavior for smaller screens */
+        margin-bottom: -10px;
+    }
+
+    /* Adjust profile picture size */
+    .profile-picture {
+        text-align: right;
+        margin: 0px 0;
+        padding: 0px;
+    }
+    .profile-picture img {
+        width: 120px;
+        height: 180px;
+    }
+    h2 {
+       border-bottom: 2px solid #ff5733;
+       margin-bottom: 10px;
+       padding-bottom: 5px;
+    }
+}
+
+
+/*body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    color: #333;
+    background: #f4f4f4;
+}
+header {
+    background: #ff5733;
+    color: white;
+    padding: 20px 0;
+    text-align: left;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+header p {
+    font-size: 1.2em;
+}*/
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+  /*  header {
+        background: #ff5733;
+        color: white;
+        padding: 10px 0;
+        text-align: left;
+    }
+    header h1 {
+        font-size: 1.5em;
+    }
+    header p {
+        flex-basis: 100%;
+	text-align: left;
+	font-size: 1.0em;
+	word-break: break-word;
+    }*/
+
+    header {
+    	display: flex; /* Align image and text side by side */
+    	align-items: left;
+    	justify-content: space-between;
+    	/*flex-wrap: wrap; Allow wrapping for small screens */
+    	background: #ff5733;
+    	color: white;
+    	padding: 0px 0;
+    	text-align: left;
+    }
+    header h1 {
+    	margin: 0;
+    	font-size: 2em;
+    	flex-basis: 100%; /* Take up full width on small screens */
+	/*text-align: left;*/
+    }
+    header p {
+    	margin: 0;
+   	font-size: 1.0em;
+    	line-height: 1.2;
+    	flex-basis: 100%; /* Adjust width for the text */
+    	text-align: left;
+    }
+    nav ul li {
+        display: block; /* Stack the menu items vertically */
+        margin: 10px 0;
+        font-size: 0.8em;
+        text-align: left; /* Center-align menu items */
+    }
+
+    /* Stack the columns and make the layout more compact on mobile */
+    .menu {
+        flex-direction: column; /* Stack columns on top of each other */
+        padding: 10px 0;
+    }
+    /*.profile-picture {
+        text-align: right;
+        margin: -10px 0;
+        padding: 2px;
+    }
+    .profile-picture img {
+        width: 100px;
+        height:140px;
+    }*/
+    .profile-picture {
+    	flex-basis: 100%;
+    	text-align: right;
+    	margin: 0px 0;
+   	padding: 5px;
+     }
+    .profile-picture img {
+    	width: 120px;
+    	height: 160px;
+   	/* object-fit: cover;
+   	 border-radius: 50%;   Keep circular profile picture */
+   	 border: 3px solid white;
+     }
+
+    .container {
+        padding: 5px;
+    }
+    h2 {
+       border-bottom: 2px solid #ff5733;
+       margin-bottom: 10px;
+       padding-bottom: 5px;
+    }
+}
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
