@@ -47,7 +47,7 @@ nav ul {
 }
 .profile-picture img {
     /*border-radius: 50%;*/
-    width: 130px;
+    width: 150px;
     height: 200px;
     object-fit: cover;
     border: 3px solid #ff5733;
